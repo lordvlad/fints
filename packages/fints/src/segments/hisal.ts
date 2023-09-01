@@ -34,11 +34,11 @@ export class HISAL extends SegmentClass(HISALProps) {
         this.productName = productName;
         this.currency = currency;
         this.bookedBalance = Parse.num(booked);
-        this.pendingBalance = Parse.num('0');
-        this.creditLimit = Parse.num('0');
-        this.availableBalance = Parse.num('0');
+        this.pendingBalance = Parse.num("0");
+        this.creditLimit = Parse.num("0");
+        this.availableBalance = Parse.num("0");
 
-        if (type == 'D') {
+        if (type === "D") {
             this.bookedBalance *= -1;
         }
     }
