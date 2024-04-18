@@ -3,7 +3,6 @@ default: build lint test
 .PHONY: node_modules
 node_modules:
 	yarn install
-	yarn lerna bootstrap
 
 .PHONY: build
 build: node_modules
