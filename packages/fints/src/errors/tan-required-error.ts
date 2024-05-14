@@ -1,3 +1,4 @@
+import type { Buffer } from "buffer";
 import { Dialog } from "../dialog";
 
 export class TanRequiredError extends Error {

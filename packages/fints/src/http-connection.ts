@@ -32,10 +32,13 @@ export class HttpConnection extends ConnectionConfig implements Connection {
         const { url } = this;
         verbose(`Sending Request: ${request}`);
         if (this.debug) { verbose(`Parsed Request:\n${request.debugString}`); }
-        const httpRequest = await fetch(url, {
-            method: "POST",
-            body: encodeBase64(String(request)),
-        });
+         
+        const method = "POST"
+        const body = encodeBase64(String(request))
+        const headers = {"TARGET": url}
+        const httpRequest = (typeof window === "undefined")
+            ? await fetch(url, { method, body })
+            : await fetch("http://localhost:3000",{ method, body, headers});
         if (!httpRequest.ok) { throw new Error(`Received bad status code ${httpRequest.status} from FinTS endpoint.`); }
 
         const responseString = decodeBase64(await httpRequest.text());

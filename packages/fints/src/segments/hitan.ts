@@ -1,3 +1,4 @@
+import type { Buffer } from "buffer";
 import { Parse } from "../parse";
 import { SegmentClass } from "./segment";
 

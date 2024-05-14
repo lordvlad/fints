@@ -1,3 +1,4 @@
+import { Buffer } from "buffer";
 import { decode, encode } from "iconv-lite";
 
 /**

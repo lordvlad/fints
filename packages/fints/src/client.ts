@@ -5,6 +5,7 @@ import { Segment, HKSPA, HISPA, HKKAZ, HIKAZ, HKSAL, HISAL, HKCDB, HICDB, HKTAN 
 import { Request } from "./request";
 import { Response } from "./response";
 import { SEPAAccount, Statement, Balance, StandingOrder } from "./types";
+import { Buffer } from "buffer";
 import { read } from "mt940-js";
 import { parse86Structured } from "./mt940-86-structured";
 

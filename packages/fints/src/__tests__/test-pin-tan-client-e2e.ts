@@ -1,5 +1,6 @@
 /* tslint:disable:no-console */
 import * as fs from "fs";
+import type { Buffer } from "buffer";
 import { TanRequiredError } from "../errors/tan-required-error";
 import { PinTanClient } from "../pin-tan-client";
 import { SEPAAccount } from "../types";

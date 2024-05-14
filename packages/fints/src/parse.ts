@@ -1,6 +1,7 @@
 import { parse as parseDate } from "date-fns";
 import { parse as parseXml } from "fast-xml-parser";
 import { encode } from "iconv-lite";
+import { Buffer } from "buffer";
 
 /**
  * A set of utilities for parsing data from the fints data formats.
